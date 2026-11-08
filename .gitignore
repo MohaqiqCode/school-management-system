@@ -1,0 +1,91 @@
+# ====================================================================
+# Comprehensive .gitignore for PHP School Management System Project
+# ====================================================================
+
+# 1. Environment and Secret Files (CRITICAL)
+# --------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+*.env
+config.local.php
+secrets.txt
+*.key
+*.pem
+
+# 2. Dependency Directories
+# --------------------------------------------------------------------
+/vendor/
+node_modules/
+bower_components/
+
+# 3. IDEs and Editors Configs
+# --------------------------------------------------------------------
+# JetBrains (PhpStorm, WebStorm, etc.)
+.idea/
+*.iml
+*.iws
+
+# Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+.history/
+*.code-workspace
+
+# Sublime Text & Eclipse
+*.sublime-project
+*.sublime-workspace
+.metadata/
+.project
+.settings/
+
+# 4. Logs and Storage
+# --------------------------------------------------------------------
+/logs/
+/storage/logs/
+/storage/framework/views/
+/storage/framework/cache/
+/storage/framework/sessions/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 5. Database Related (Backups & Dumps)
+# --------------------------------------------------------------------
+*.sql
+*.sqlite
+*.db
+/backups/
+/storage/backups/
+
+# 6. Operating System Files
+# --------------------------------------------------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.Trashes
+
+# 7. Testing and Cache
+# --------------------------------------------------------------------
+.phpunit.result.cache
+.phpunit.cache/
+/coverage/
+.php_cs.cache
+
+# 8. User Uploads (If your system has student/teacher avatar uploads)
+# --------------------------------------------------------------------
+# Keep the folder structure but ignore uploaded files
+/uploads/*
+!/uploads/.gitkeep
