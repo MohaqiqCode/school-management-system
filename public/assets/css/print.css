@@ -1,0 +1,241 @@
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+  /* Hide non-printable elements */
+  .no-print,
+  .sidebar,
+  .navbar,
+  .btn,
+  .dropdown-toggle,
+  .dataTables_filter,
+  .dataTables_length,
+  .dataTables_info,
+  .dataTables_paginate,
+  .btn-group,
+  .dropdown-menu,
+  .modal,
+  .toast,
+  .alert-dismissible .btn-close,
+  .footer,
+  .breadcrumb,
+  .pagination,
+  .form-select,
+  .form-control,
+  input[type="file"],
+  .upload-area,
+  #sidebarToggle,
+  .notification-badge,
+  .notification-dropdown,
+  .quick-actions,
+  .search-box,
+  .filters-section,
+  .export-buttons {
+    display: none !important;
+  }
+
+  /* Show printable elements */
+  .print-only {
+    display: block !important;
+  }
+
+  /* Body */
+  body {
+    background: white !important;
+    font-size: 12px;
+    color: #000;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Layout */
+  .wrapper {
+    display: block;
+  }
+
+  .main-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    background: white !important;
+  }
+
+  .container-fluid {
+    padding: 0 !important;
+  }
+
+  /* Page Setup */
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  /* Cards */
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .card-header {
+    background: #f5f5f5 !important;
+    border-bottom: 1px solid #ddd !important;
+  }
+
+  /* Tables */
+  .table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    font-size: 11px;
+  }
+
+  .table th {
+    background: #f5f5f5 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    border: 1px solid #ddd !important;
+    font-weight: 700;
+  }
+
+  .table td {
+    border: 1px solid #ddd !important;
+  }
+
+  .table-bordered {
+    border: 2px solid #000 !important;
+  }
+
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #000 !important;
+  }
+
+  /* Badges */
+  .badge {
+    border: 1px solid #000 !important;
+    color: #000 !important;
+    background: transparent !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Text */
+  .text-muted {
+    color: #666 !important;
+  }
+
+  .text-primary {
+    color: #000 !important;
+  }
+  .text-success {
+    color: #000 !important;
+  }
+  .text-danger {
+    color: #000 !important;
+  }
+  .text-warning {
+    color: #000 !important;
+  }
+  .text-info {
+    color: #000 !important;
+  }
+
+  /* Links */
+  a {
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+
+  /* Progress Bars */
+  .progress {
+    border: 1px solid #ddd;
+    background: #f0f0f0 !important;
+  }
+
+  .progress-bar {
+    background: #000 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Charts (hide canvas, show alt text) */
+  canvas {
+    display: none;
+  }
+
+  /* Images */
+  img {
+    max-width: 100% !important;
+  }
+
+  /* Watermark */
+  .watermark {
+    display: block !important;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    font-size: 80px;
+    color: rgba(0, 0, 0, 0.05);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  /* Page Breaks */
+  .page-break {
+    page-break-before: always;
+  }
+
+  .no-page-break {
+    page-break-inside: avoid;
+  }
+
+  /* Print Header & Footer */
+  .print-header {
+    text-align: center;
+    border-bottom: 3px double #000;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
+
+  .print-header h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .print-footer {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #000;
+  }
+
+  /* Signatures */
+  .signatures {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+  }
+
+  .signature-box {
+    text-align: center;
+    min-width: 120px;
+  }
+
+  .signature-line {
+    border-bottom: 1px solid #000;
+    width: 120px;
+    margin: 40px auto 5px;
+  }
+
+  /* Grades */
+  .grade-pass {
+    color: #000 !important;
+    font-weight: 700;
+  }
+  .grade-fail {
+    color: #000 !important;
+    font-weight: 700;
+  }
+}

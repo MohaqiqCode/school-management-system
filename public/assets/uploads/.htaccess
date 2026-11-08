@@ -1,0 +1,23 @@
+# Allow only specific file types
+
+<FilesMatch ".\*">
+Order allow,deny
+Allow from all
+</FilesMatch>
+
+# Block PHP execution in uploads
+
+<FilesMatch "\.php$">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
+# Allow image and document files
+
+AddType image/jpeg .jpg .jpeg
+AddType image/png .png
+AddType image/gif .gif
+AddType image/webp .webp
+AddType application/pdf .pdf
+AddType application/msword .doc
+AddType application/vnd.openxmlformats-officedocument.wordprocessingml.document .docx

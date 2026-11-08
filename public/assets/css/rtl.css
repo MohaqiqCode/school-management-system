@@ -1,0 +1,304 @@
+/* ============================================
+   RTL Specific Styles
+   ============================================ */
+
+/* Direction */
+body {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Sidebar RTL */
+.sidebar {
+  right: 0;
+  left: auto;
+}
+
+.sidebar.collapsed {
+  margin-right: -260px;
+}
+
+.main-content {
+  margin-right: 260px;
+  margin-left: 0;
+}
+
+.main-content.expanded {
+  margin-right: 0;
+}
+
+/* Navbar RTL */
+.navbar-nav {
+  padding-right: 0;
+}
+
+.me-auto {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+.ms-auto {
+  margin-right: auto !important;
+  margin-left: 0 !important;
+}
+.me-1 {
+  margin-left: 4px !important;
+  margin-right: 0 !important;
+}
+.me-2 {
+  margin-left: 8px !important;
+  margin-right: 0 !important;
+}
+.me-3 {
+  margin-left: 16px !important;
+  margin-right: 0 !important;
+}
+.ms-1 {
+  margin-right: 4px !important;
+  margin-left: 0 !important;
+}
+.ms-2 {
+  margin-right: 8px !important;
+  margin-left: 0 !important;
+}
+.ms-3 {
+  margin-right: 16px !important;
+  margin-left: 0 !important;
+}
+
+/* Dropdown RTL */
+.dropdown-menu {
+  text-align: right;
+}
+
+.dropdown-menu-end {
+  right: auto;
+  left: 0;
+}
+
+/* Form RTL */
+.form-check {
+  padding-right: 1.5em;
+  padding-left: 0;
+}
+
+.form-check .form-check-input {
+  float: right;
+  margin-right: -1.5em;
+  margin-left: 0;
+}
+
+.form-switch .form-check-input {
+  margin-right: -2.5em;
+}
+
+/* Input Group RTL */
+.input-group > .form-control {
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0 !important;
+}
+
+.input-group > .input-group-text:first-child {
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0 !important;
+}
+
+.input-group > .input-group-text:last-child {
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm) !important;
+}
+
+.input-group > .form-control:not(:first-child) {
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm) !important;
+}
+
+/* Table RTL */
+.table th,
+.table td {
+  text-align: right;
+}
+
+/* Breadcrumb RTL */
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "\f053";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  float: right;
+  padding-left: 8px;
+  padding-right: 0;
+}
+
+/* Pagination RTL */
+.page-item:first-child .page-link {
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.page-item:last-child .page-link {
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+}
+
+/* Badge RTL */
+.badge .fa-arrow-left {
+  transform: rotate(180deg);
+}
+
+/* Modal RTL */
+.modal-header .btn-close {
+  margin: -0.5rem auto -0.5rem -0.5rem;
+}
+
+/* List Group RTL */
+.list-group {
+  padding-right: 0;
+}
+
+/* Accordion RTL */
+.accordion-button::after {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/* Toast RTL */
+.toast {
+  direction: rtl;
+}
+
+/* Select2 RTL */
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  left: 10px;
+  right: auto;
+}
+
+.select2-container--bootstrap-5
+  .select2-selection--single
+  .select2-selection__rendered {
+  padding-right: 15px;
+  padding-left: 0;
+  text-align: right;
+}
+
+/* SweetAlert2 RTL */
+.swal2-popup {
+  direction: rtl;
+}
+
+.swal2-actions {
+  flex-direction: row-reverse;
+}
+
+/* Close Button RTL */
+.btn-close {
+  margin-right: auto;
+}
+
+/* Border Left becomes Border Right */
+.border-left-primary {
+  border-right: 4px solid var(--primary) !important;
+  border-left: none !important;
+}
+.border-left-success {
+  border-right: 4px solid var(--success) !important;
+  border-left: none !important;
+}
+.border-left-info {
+  border-right: 4px solid var(--info) !important;
+  border-left: none !important;
+}
+.border-left-warning {
+  border-right: 4px solid var(--warning) !important;
+  border-left: none !important;
+}
+.border-left-danger {
+  border-right: 4px solid var(--danger) !important;
+  border-left: none !important;
+}
+
+/* Card RTL */
+.card-header .btn-group {
+  margin-right: auto;
+}
+
+/* Alert RTL */
+.alert-dismissible .btn-close {
+  left: 10px;
+  right: auto;
+}
+
+/* Timeline RTL */
+.timeline {
+  padding-right: 25px;
+  padding-left: 0;
+}
+
+.timeline::before {
+  right: 8px;
+  left: auto;
+}
+
+.timeline-marker {
+  right: -6px;
+  left: auto;
+}
+
+/* Progress Bar RTL */
+.progress-bar {
+  float: right;
+}
+
+/* Offcanvas RTL */
+.offcanvas-start {
+  right: 0;
+  left: auto;
+  transform: translateX(100%);
+}
+
+/* Tooltip RTL */
+.tooltip .tooltip-inner {
+  text-align: right;
+}
+
+/* Flatpickr RTL */
+.flatpickr-calendar {
+  direction: rtl;
+}
+
+/* Fix Font Awesome Icons Direction */
+.fa-arrow-right:before {
+  content: "\f060";
+}
+.fa-arrow-left:before {
+  content: "\f061";
+}
+.fa-chevron-right:before {
+  content: "\f053";
+}
+.fa-chevron-left:before {
+  content: "\f054";
+}
+.fa-angle-right:before {
+  content: "\f104";
+}
+.fa-angle-left:before {
+  content: "\f105";
+}
+.fa-angle-double-right:before {
+  content: "\f100";
+}
+.fa-angle-double-left:before {
+  content: "\f101";
+}
+.fa-caret-right:before {
+  content: "\f0d9";
+}
+.fa-caret-left:before {
+  content: "\f0da";
+}
+.fa-hand-o-right:before {
+  content: "\f0a5";
+}
+.fa-hand-o-left:before {
+  content: "\f0a4";
+}
+
+/* Persian Datepicker RTL */
+.persian-datepicker {
+  direction: rtl;
+}

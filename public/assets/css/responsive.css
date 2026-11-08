@@ -1,0 +1,298 @@
+/* ============================================
+   Responsive Styles
+   ============================================ */
+
+/* Extra Large Devices (1200px+) */
+@media (min-width: 1200px) {
+  .container-fluid {
+    padding: 30px;
+  }
+}
+
+/* Large Devices (992px - 1199px) */
+@media (max-width: 1199.98px) {
+  .sidebar {
+    width: 220px;
+  }
+
+  .main-content {
+    margin-right: 220px;
+  }
+
+  .stat-box {
+    min-width: 180px;
+  }
+}
+
+/* Medium Devices (768px - 991px) */
+@media (max-width: 991.98px) {
+  .sidebar {
+    margin-right: -260px;
+    box-shadow: var(--shadow-lg);
+    z-index: 1050;
+    transition: all 0.3s ease;
+  }
+
+  .sidebar.show {
+    margin-right: 0;
+  }
+
+  .main-content {
+    margin-right: 0;
+  }
+
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+  }
+
+  .sidebar.show + .sidebar-overlay {
+    display: block;
+  }
+
+  .stat-box {
+    min-width: 150px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .table-responsive {
+    font-size: 12px;
+  }
+
+  .btn-group-sm .btn {
+    padding: 3px 6px;
+    font-size: 11px;
+  }
+
+  .hide-md {
+    display: none !important;
+  }
+}
+
+/* Small Devices (576px - 767px) */
+@media (max-width: 767.98px) {
+  .container-fluid {
+    padding: 15px;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .stat-box {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+
+  .stats-row {
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+
+  .hide-sm {
+    display: none !important;
+  }
+
+  .btn {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+
+  .modal-dialog {
+    margin: 10px;
+  }
+
+  .dropdown-menu {
+    width: 280px;
+  }
+
+  .notification-dropdown {
+    width: 280px !important;
+  }
+
+  .pagination .page-link {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+  }
+}
+
+/* Extra Small Devices (max 575px) */
+@media (max-width: 575.98px) {
+  .container-fluid {
+    padding: 10px;
+  }
+
+  .card-body {
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .btn-sm {
+    padding: 3px 8px;
+    font-size: 11px;
+  }
+
+  .table th,
+  .table td {
+    padding: 6px 8px;
+    font-size: 10px;
+  }
+
+  .badge {
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+
+  .form-control,
+  .form-select {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .form-label {
+    font-size: 12px;
+  }
+
+  .hide-xs {
+    display: none !important;
+  }
+
+  .modal-dialog {
+    margin: 5px;
+  }
+
+  .modal-header {
+    padding: 12px 15px;
+  }
+
+  .modal-body {
+    padding: 15px;
+  }
+
+  .dropdown-menu {
+    width: 250px;
+    font-size: 12px;
+  }
+}
+
+/* Mobile First Sidebar */
+@media (max-width: 991.98px) {
+  .sidebar .sidebar-header {
+    padding: 15px;
+  }
+
+  .sidebar .sidebar-user {
+    padding: 10px 15px;
+  }
+
+  .sidebar .nav-link {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .sidebar .nav-link i {
+    width: 20px;
+  }
+}
+
+/* Print Media */
+@media print {
+  .sidebar,
+  .navbar,
+  .no-print,
+  .btn,
+  .footer {
+    display: none !important;
+  }
+
+  .main-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  body {
+    font-size: 12px;
+  }
+}
+
+/* Landscape Phone */
+@media (max-height: 500px) and (orientation: landscape) {
+  .sidebar {
+    overflow-y: auto;
+    max-height: 100vh;
+  }
+
+  .modal-dialog {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* Dark Mode Preference */
+@media (prefers-color-scheme: dark) {
+  /* Optional: Auto dark mode based on system preference */
+  /* Uncomment to enable:
+    body:not(.light-mode) {
+        ...dark mode styles...
+    }
+    */
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
